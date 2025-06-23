@@ -1,0 +1,136 @@
+:root {
+  --fs-300: 1em;
+  --fs-400: 1.25em;
+  --fs-500: 1.5em;
+  --fs-600: 1.75em;
+  --fs-700: 2em;
+  --ff-heading: "Bebas Neue", sans-serif;
+  --ff-body: "Open Sans", sans-serif;
+  --ff-footer: "SpaceMono", Monospace;
+  --fw-400: 400;
+  --fw-700: 700;
+  --fw-900: 900;
+  --clr-primary-100: hsla(120, 100%, 10%);
+  --clr-primary-200: hsla(120, 100%, 20%);
+  --clr-primary-300: hsla(120, 100%, 30%);
+  --clr-primary-400: hsla(120, 100%, 40%);
+  --clr-primary-500: hsla(120, 100%, 50%);
+  --clr-primary-600: hsla(120, 100%, 60%);
+  --clr-primary-700: hsla(120, 100%, 70%);
+  --clr-primary-800: hsla(120, 100%, 80%);
+  --clr-primary-900: hsla(120, 100%, 90%);
+  --clr-primary-550: hsla(120, 100%, 50%, 0.5);
+  --clr-secondary-100: hsla(180, 100%, 10%);
+  --clr-secondary-200: hsla(180, 100%, 20%);
+  --clr-secondary-300: hsla(180, 100%, 30%);
+  --clr-secondary-400: hsla(180, 100%, 40%);
+  --clr-secondary-500: hsla(180, 100%, 50%);
+  --clr-secondary-600: hsla(180, 100%, 60%);
+  --clr-secondary-700: hsla(180, 100%, 70%);
+  --clr-secondary-800: hsla(180, 100%, 80%);
+  --clr-secondary-900: hsla(180, 100%, 90%);
+  --clr-secondary-550: hsla(180, 100%, 50%, 0.5);
+  --clr-GScale-100: hsl(0, 0% , 100%);
+  --clr-GScale-200: hsl(0, 0% , 75%);
+  --clr-GScale-300: hsl(0, 0% , 50%);
+  --clr-GScale-400: hsl(0, 0% , 25%);
+  --clr-GScale-500: hsl(0, 0% , 0%);
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-300: 1em;
+    --fs-400: 1.5em;
+    --fs-500: 2em;
+    --fs-600: 2.5em;
+    --fs-700: 3em;
+  }
+}
+.left {
+  background-color: var(--clr-primary-800);
+  padding: 2.5em;
+  border-radius: 20px 0 0 20px;
+  width: 35ch;
+}
+.left h1 {
+  font-family: var(--ff-heading);
+}
+.left form #submit {
+  margin-top: 0.8em;
+  padding: 0.5em;
+  background-color: var(--clr-primary-600);
+  font-family: var(--ff-body);
+  border: 1px solid var(--clr-GScale-500);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left form #submit:hover {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-GScale-100);
+  border: 1px solid var(--clr-GScale-100);
+}
+
+.right {
+  width: 35ch;
+  background-color: var(--clr-secondary-900);
+  padding: 2.5em;
+  border-radius: 0 20px 20px 0;
+}
+
+@media screen and (max-width: 800px) {
+  .left {
+    border-radius: 20px 20px 0 0;
+    width: auto;
+  }
+  .right {
+    border-radius: 0 0 20px 20px;
+    width: auto;
+  }
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../../fonts/BebasNeue-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/OpenSans-VariableFont_wdth,wght.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SpaceMono";
+  src: url("../../fonts/SpaceMono-Regular.ttf");
+  font-display: swap;
+}
+body {
+  margin: 0;
+}
+
+header {
+  padding: 2.5em;
+  background-color: var(--clr-primary-700);
+  font-family: var(--ff-heading);
+}
+
+main {
+  padding: 2.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: var(--ff-body);
+}
+
+footer {
+  padding: 2.5em;
+  background-color: var(--clr-GScale-500);
+  color: var(--clr-GScale-100);
+  font-family: var(--ff-footer);
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

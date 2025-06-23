@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hours</title>
+    <link href="style/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Hours</h1>
+    </header>
+    <main>
+        <div class="left">
+            <h1>Welcome To your Hours calculator</h1>
+            <p>Insert here your hours and you will get the summary and the total hours worked</p>
+            <form action="" method="post" id="hours">
+                <table id="table">
+                    <tr>
+                        <th class="header">day</th>
+                        <th class="header">start</th>
+                        <th class="header">end</th>
+                    </tr>
+                    <tr>
+                        <td>monday</td>
+                        <td><input type="time" name="Mst" id="Mst"></td>
+                        <td><input type="time" name="Mex" id="Mex"></td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td><input type="time" name="Tst" id="Tst"></td>
+                        <td><input type="time" name="Tex" id="Tex"></td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td><input type="time" name="Wst" id="Wst"></td>
+                        <td><input type="time" name="Wex" id="Wex"></td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td><input type="time" name="Hst" id="Hst"></td>
+                        <td><input type="time" name="Hex" id="Hex"></td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td><input type="time" name="Fst" id="Fst"></td>
+                        <td><input type="time" name="Fex" id="Fex"></td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td><input type="time" name="Sst" id="Sst"></td>
+                        <td><input type="time" name="Aex" id="Aex"></td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td><input type="time" name="Ust" id="Ust"></td>
+                        <td><input type="time" name="Uex" id="Uex"></td>
+                    </tr>
+                </table>
+                <label for="Mdate">Week of: </label>
+                <input type="date" name="Mdate" id="Mdate">
+                <br>
+                <input type="submit" value="submit" id="submit">
+            </form>
+        </div>
+        <div class="right">
+            <div id="results"></div>
+            <div id="grandT"></div>
+        </div>
+        <script src="script/script.js"></script>
+    </main>
+    <footer>
+        <p>WDEB &copy; 2025</p>
+    </footer>
+</body>
+</html>

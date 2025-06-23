@@ -1,0 +1,30 @@
+@use "./abstracts/variables";
+@use "./components/main";
+@use "./components/Typo";
+
+body{
+    margin: 0;
+}
+header{
+    padding: 2.5em;
+    background-color: var(--clr-primary-700);
+    font-family: var(--ff-heading);
+}
+main{
+    padding: 2.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: var(--ff-body);
+}
+footer{
+    padding: 2.5em;
+    background-color: var(--clr-GScale-500);
+    color: var(--clr-GScale-100);
+    font-family: var(--ff-footer);
+}
+@media screen and (max-width: 800px){
+    main{
+        flex-direction: column;
+    }
+}
