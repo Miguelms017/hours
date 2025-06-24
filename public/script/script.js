@@ -84,17 +84,24 @@ function GetDate(event){
     const SaTh = DayTh(arr5[0]);
     const SuTh = DayTh(arr6[0]);
 
+    // months in letter
+    const tuLT = MonthLetter(arr[1]);
+    const weLT = MonthLetter(arr2[1]);
+    const thLT = MonthLetter(arr3[1]);
+    const frLT = MonthLetter(arr4[1]);
+    const saLT = MonthLetter(arr5[1]);
+    const suLT = MonthLetter(arr6[1]);
     
     // display Hours in Document
     let html = `
     <h2>These are the hours: </h2>
     <p> Monday ${moLT} ${dyTh}. ${yr}: ${newDays.NewMonday[0]} - ${newDays.NewMonday[1]}</p>
-    <p> Tuesday ${arr[1]} ${TuTh}. ${arr[2]}: ${newDays.NewTuesday[0]} - ${newDays.NewTuesday[1]}</p>
-    <p> Wednesday ${arr2[1]} ${WeTh}. ${arr2[2]}: ${newDays.NewWednesday[0]} - ${newDays.NewWednesday[1]}</p>
-    <p> Thursday ${arr3[1]} ${ThTh}. ${arr3[2]}: ${newDays.NewThursday[0]} - ${newDays.NewThursday[1]}</p>
-    <p> Friday ${arr4[1]} ${FrTh}. ${arr4[2]}: ${newDays.NewFriday[0]} - ${newDays.NewFriday[1]}</p>
-    <p> Saturday ${arr5[1]} ${SaTh}. ${arr5[2]}: ${newDays.NewSaturday[0]} - ${newDays.NewSaturday[1]}</p>
-    <p> Sunday ${arr6[1]} ${SuTh}. ${arr6[2]}: ${newDays.NewSunday[0]} - ${newDays.NewSunday[1]}</p>
+    <p> Tuesday ${tuLT} ${TuTh}. ${arr[2]}: ${newDays.NewTuesday[0]} - ${newDays.NewTuesday[1]}</p>
+    <p> Wednesday ${weLT} ${WeTh}. ${arr2[2]}: ${newDays.NewWednesday[0]} - ${newDays.NewWednesday[1]}</p>
+    <p> Thursday ${thLT} ${ThTh}. ${arr3[2]}: ${newDays.NewThursday[0]} - ${newDays.NewThursday[1]}</p>
+    <p> Friday ${frLT} ${FrTh}. ${arr4[2]}: ${newDays.NewFriday[0]} - ${newDays.NewFriday[1]}</p>
+    <p> Saturday ${saLT} ${SaTh}. ${arr5[2]}: ${newDays.NewSaturday[0]} - ${newDays.NewSaturday[1]}</p>
+    <p> Sunday ${suLT} ${SuTh}. ${arr6[2]}: ${newDays.NewSunday[0]} - ${newDays.NewSunday[1]}</p>
     `;
 
     document.getElementById('results').innerHTML = html;
@@ -245,8 +252,6 @@ function NextDay(yr, mo, dy){
         }
     }
 
-    //add function to implement month names and ordinal on day
-    NxtMo = MonthLetter(NxtMo);
 
     //returning Date
     return Xt = [NxtDy, NxtMo, NxtYr];
