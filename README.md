@@ -11,12 +11,14 @@ This tool convert times inserted by users and calculates the total work hours. A
 ## Changelog
 
 **1.0**
+
 *Creation of the tool.*
 - logic created
 - calculation of hours
 - message generator
 
 **1.0.1**
+
 *bug fixed*
 + a bug when user put between one to 6 day before the end of a month bugs the other days giving NaN results 
 and altering the month limit management.
