@@ -22,3 +22,8 @@ This tool convert times inserted by users and calculates the total work hours. A
 *bug fixed*
 + a bug when user put between one to 6 day before the end of a month bugs the other days giving NaN results 
 and altering the month limit management.
+
+**1.0.2**
+
+*Date management*
++ now the page only shows the spaces which has hours and skip the blank or undefined hours

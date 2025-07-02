@@ -95,14 +95,35 @@ function GetDate(event){
     // display Hours in Document
     let html = `
     <h2>These are the hours: </h2>
-    <p> Monday ${moLT} ${dyTh}. ${yr}: ${newDays.NewMonday[0]} - ${newDays.NewMonday[1]}</p>
-    <p> Tuesday ${tuLT} ${TuTh}. ${arr[2]}: ${newDays.NewTuesday[0]} - ${newDays.NewTuesday[1]}</p>
-    <p> Wednesday ${weLT} ${WeTh}. ${arr2[2]}: ${newDays.NewWednesday[0]} - ${newDays.NewWednesday[1]}</p>
-    <p> Thursday ${thLT} ${ThTh}. ${arr3[2]}: ${newDays.NewThursday[0]} - ${newDays.NewThursday[1]}</p>
-    <p> Friday ${frLT} ${FrTh}. ${arr4[2]}: ${newDays.NewFriday[0]} - ${newDays.NewFriday[1]}</p>
-    <p> Saturday ${saLT} ${SaTh}. ${arr5[2]}: ${newDays.NewSaturday[0]} - ${newDays.NewSaturday[1]}</p>
-    <p> Sunday ${suLT} ${SuTh}. ${arr6[2]}: ${newDays.NewSunday[0]} - ${newDays.NewSunday[1]}</p>
     `;
+    
+    if (newDays.NewMonday !== ":undefinedam"){
+        html = html + `<p> Monday ${moLT} ${dyTh}. ${yr}: ${newDays.NewMonday[0]} - ${newDays.NewMonday[1]}</p>`
+    }
+
+    if (newDays.NewTuesday[0] !== ":undefinedam"){
+        html = html + `<p> Tuesday ${tuLT} ${TuTh}. ${arr[2]}: ${newDays.NewTuesday[0]} - ${newDays.NewTuesday[1]}</p>`
+    }
+
+    if (newDays.NewWednesday[0] !== ":undefinedam"){
+        html = html + `<p> Wednesday ${weLT} ${WeTh}. ${arr2[2]}: ${newDays.NewWednesday[0]} - ${newDays.NewWednesday[1]}</p>`
+    }
+
+    if (newDays.NewThursday[0] !== ":undefinedam"){
+        html = html + `<p> Thursday ${thLT} ${ThTh}. ${arr3[2]}: ${newDays.NewThursday[0]} - ${newDays.NewThursday[1]}</p>`
+    }
+
+    if (newDays.NewFriday[0] !== ":undefinedam"){
+        html = html + `<p> Friday ${frLT} ${FrTh}. ${arr4[2]}: ${newDays.NewFriday[0]} - ${newDays.NewFriday[1]}</p>`
+    }
+
+    if (newDays.NewSaturday[0] !== ":undefinedam"){
+        html = html + `<p> Saturday ${saLT} ${SaTh}. ${arr5[2]}: ${newDays.NewSaturday[0]} - ${newDays.NewSaturday[1]}</p>`
+    }
+
+    if (newDays.NewSunday[0] !== ":undefinedam") {
+        html = html + `<p> Sunday ${suLT} ${SuTh}. ${arr6[2]}: ${newDays.NewSunday[0]} - ${newDays.NewSunday[1]}</p>`
+    }
 
     document.getElementById('results').innerHTML = html;
 }
