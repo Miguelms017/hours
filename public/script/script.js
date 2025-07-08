@@ -91,38 +91,62 @@ function GetDate(event){
     const frLT = MonthLetter(arr4[1]);
     const saLT = MonthLetter(arr5[1]);
     const suLT = MonthLetter(arr6[1]);
+
+    // checkboxes
+    const OffM = document.getElementById("OffMon");
+    const OffT = document.getElementById("OffTue");
+    const OffW = document.getElementById("OffWed");
+    const OffH = document.getElementById("OffThu");
+    const OffF = document.getElementById("OffFri");
+    const OffS = document.getElementById("OffSat");
+    const OffU = document.getElementById("OffSun");
+
     
     // display Hours in Document
     let html = `
     <h2>These are the hours: </h2>
     `;
-    
-    if (newDays.NewMonday !== ":undefinedam"){
+
+    if (OffM.checked){
+        html = html + `<p> Monday ${moLT} ${dyTh}. ${yr}: Day off</p>`
+    } else if (newDays.NewMonday !== ":undefinedam"){
         html = html + `<p> Monday ${moLT} ${dyTh}. ${yr}: ${newDays.NewMonday[0]} - ${newDays.NewMonday[1]}</p>`
     }
 
     if (newDays.NewTuesday[0] !== ":undefinedam"){
         html = html + `<p> Tuesday ${tuLT} ${TuTh}. ${arr[2]}: ${newDays.NewTuesday[0]} - ${newDays.NewTuesday[1]}</p>`
+    } else if (OffT.checked){
+        html = html + `<p> Tuesday ${tuLT} ${TuTh}. ${arr[2]}: Day off</p>`
     }
 
     if (newDays.NewWednesday[0] !== ":undefinedam"){
         html = html + `<p> Wednesday ${weLT} ${WeTh}. ${arr2[2]}: ${newDays.NewWednesday[0]} - ${newDays.NewWednesday[1]}</p>`
+    } else if (OffW.checked){
+        html = html + `<p> Wednesday ${weLT} ${WeTh}. ${arr2[2]}: Day off</p>`
     }
 
     if (newDays.NewThursday[0] !== ":undefinedam"){
         html = html + `<p> Thursday ${thLT} ${ThTh}. ${arr3[2]}: ${newDays.NewThursday[0]} - ${newDays.NewThursday[1]}</p>`
+    } else if (OffH.checked){
+        html = html + `<p> Thursday ${thLT} ${ThTh}. ${arr3[2]}: Day off</p>`
     }
 
     if (newDays.NewFriday[0] !== ":undefinedam"){
         html = html + `<p> Friday ${frLT} ${FrTh}. ${arr4[2]}: ${newDays.NewFriday[0]} - ${newDays.NewFriday[1]}</p>`
+    } else if (OffF.checked){
+        html = html + `<p> Friday ${frLT} ${FrTh}. ${arr4[2]}: Day off</p>`
     }
 
     if (newDays.NewSaturday[0] !== ":undefinedam"){
         html = html + `<p> Saturday ${saLT} ${SaTh}. ${arr5[2]}: ${newDays.NewSaturday[0]} - ${newDays.NewSaturday[1]}</p>`
+    } else if (OffS.checked){
+        html = html + `<p> Saturday ${saLT} ${SaTh}. ${arr5[2]}: Day off</p>`
     }
 
     if (newDays.NewSunday[0] !== ":undefinedam") {
         html = html + `<p> Sunday ${suLT} ${SuTh}. ${arr6[2]}: ${newDays.NewSunday[0]} - ${newDays.NewSunday[1]}</p>`
+    } else if (OffU.checked){
+        html = html + `<p> Monday ${suLT} ${SuTh}. ${arr6[2]}: Day off</p>`
     }
 
     document.getElementById('results').innerHTML = html;

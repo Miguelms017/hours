@@ -27,3 +27,8 @@ and altering the month limit management.
 
 *Date management*
 + now the page only shows the spaces which has hours and skip the blank or undefined hours
+
+**1.0.3**
+
+*Days Off*
++ Added Days off
