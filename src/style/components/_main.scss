@@ -28,6 +28,11 @@
     background-color: var(--clr-secondary-900);
     padding: 2.5em;
     border-radius: 0 20px 20px 0;
+    #results{
+        #Warn{
+            color: #ff0000;
+        }
+    }
 }
 
 @media screen and (max-width: 800px){

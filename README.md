@@ -32,3 +32,8 @@ and altering the month limit management.
 
 *Days Off*
 + Added Days off
+
+**1.0.4**
+
+*bug fixed*
++ fixed a bug which shows monday as undefined date. Now, if a date is missing, an error will display.
