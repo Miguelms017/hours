@@ -23,6 +23,16 @@ footer{
     color: var(--clr-GScale-100);
     font-family: var(--ff-footer);
 }
+#holidayM, #holidayT, #holidayW, #holidayH, #holidayF, #holidayS, #holidayU{
+    width: 14ch;
+    display: none;
+}
+#Mst, #Tst, #Wst, #Hst, #Fst, #Sst, #Ust{
+    margin-right: 3.5ch;
+}
+#version{
+    font-size: var(--fs-100);
+}
 @media screen and (max-width: 800px){
     main{
         flex-direction: column;

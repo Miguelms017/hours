@@ -13,27 +13,36 @@ This tool convert times inserted by users and calculates the total work hours. A
 **1.0**
 
 *Creation of the tool.*
-- logic created
-- calculation of hours
-- message generator
+- logic created.
+- calculation of hours.
+- message generator.
 
 **1.0.1**
 
 *bug fixed*
-+ a bug when user put between one to 6 day before the end of a month bugs the other days giving NaN results 
++ a bug when user put between one to 6 day before the end of a month bugs the other days giving NaN results.
 and altering the month limit management.
 
 **1.0.2**
 
 *Date management*
-+ now the page only shows the spaces which has hours and skip the blank or undefined hours
++ now the page only shows the spaces which has hours and skip the blank or undefined hours.
 
 **1.0.3**
 
 *Days Off*
-+ Added Days off
++ Added Days off.
 
 **1.0.4**
 
 *bug fixed*
 + fixed a bug which shows monday as undefined date. Now, if a date is missing, an error will display.
+
+**1.1**
+
+*Day offs Update*
++ implementation of a select menu with holidays, medical visit and vacations.
++ in the message will show the holiday name or medical or vacation day.
++ shows the quantity of days off at the bottom of the message.
++ format improved to keep the table style by applying paddings and sizes.
++ version counter at footer.

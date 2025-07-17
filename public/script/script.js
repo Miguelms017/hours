@@ -101,6 +101,15 @@ function GetDate(event){
     const OffS = document.getElementById("OffSat");
     const OffU = document.getElementById("OffSun");
 
+    // Holiday Select Values
+    const hMval = document.getElementById("holidayM").value;
+    const hTval = document.getElementById("holidayT").value;
+    const hWval = document.getElementById("holidayW").value;
+    const hHval = document.getElementById("holidayH").value;
+    const hFval = document.getElementById("holidayF").value;
+    const hSval = document.getElementById("holidayS").value;
+    const hUval = document.getElementById("holidayU").value;
+
     
     // display Hours in Document
     let html = `
@@ -112,7 +121,7 @@ function GetDate(event){
     } else {
     
         if (OffM.checked){
-            html = html + `<p> Monday ${moLT} ${dyTh}. ${yr}: Day off</p>`
+            html = html + `<p> Monday ${moLT} ${dyTh}. ${yr}: Day off (${hMval})</p>`
         } else if (newDays.NewMonday[0] !== ":undefinedam"){
             html = html + `<p> Monday ${moLT} ${dyTh}. ${yr}: ${newDays.NewMonday[0]} - ${newDays.NewMonday[1]}</p>`
         }
@@ -120,37 +129,37 @@ function GetDate(event){
         if (newDays.NewTuesday[0] !== ":undefinedam"){
             html = html + `<p> Tuesday ${tuLT} ${TuTh}. ${arr[2]}: ${newDays.NewTuesday[0]} - ${newDays.NewTuesday[1]}</p>`
         } else if (OffT.checked){
-            html = html + `<p> Tuesday ${tuLT} ${TuTh}. ${arr[2]}: Day off</p>`
+            html = html + `<p> Tuesday ${tuLT} ${TuTh}. ${arr[2]}: Day off (${hTval})</p>`
         }
 
         if (newDays.NewWednesday[0] !== ":undefinedam"){
             html = html + `<p> Wednesday ${weLT} ${WeTh}. ${arr2[2]}: ${newDays.NewWednesday[0]} - ${newDays.NewWednesday[1]}</p>`
         } else if (OffW.checked){
-            html = html + `<p> Wednesday ${weLT} ${WeTh}. ${arr2[2]}: Day off</p>`
+            html = html + `<p> Wednesday ${weLT} ${WeTh}. ${arr2[2]}: Day off  (${hWval})</p>`
         }
 
         if (newDays.NewThursday[0] !== ":undefinedam"){
             html = html + `<p> Thursday ${thLT} ${ThTh}. ${arr3[2]}: ${newDays.NewThursday[0]} - ${newDays.NewThursday[1]}</p>`
         } else if (OffH.checked){
-            html = html + `<p> Thursday ${thLT} ${ThTh}. ${arr3[2]}: Day off</p>`
+            html = html + `<p> Thursday ${thLT} ${ThTh}. ${arr3[2]}: Day off (${hHval})</p>`
         }
 
         if (newDays.NewFriday[0] !== ":undefinedam"){
             html = html + `<p> Friday ${frLT} ${FrTh}. ${arr4[2]}: ${newDays.NewFriday[0]} - ${newDays.NewFriday[1]}</p>`
         } else if (OffF.checked){
-            html = html + `<p> Friday ${frLT} ${FrTh}. ${arr4[2]}: Day off</p>`
+            html = html + `<p> Friday ${frLT} ${FrTh}. ${arr4[2]}: Day off (${hFval})</p>`
         }
 
         if (newDays.NewSaturday[0] !== ":undefinedam"){
             html = html + `<p> Saturday ${saLT} ${SaTh}. ${arr5[2]}: ${newDays.NewSaturday[0]} - ${newDays.NewSaturday[1]}</p>`
         } else if (OffS.checked){
-            html = html + `<p> Saturday ${saLT} ${SaTh}. ${arr5[2]}: Day off</p>`
+            html = html + `<p> Saturday ${saLT} ${SaTh}. ${arr5[2]}: Day off (${hSval})</p>`
         }
 
         if (newDays.NewSunday[0] !== ":undefinedam") {
             html = html + `<p> Sunday ${suLT} ${SuTh}. ${arr6[2]}: ${newDays.NewSunday[0]} - ${newDays.NewSunday[1]}</p>`
         } else if (OffU.checked){
-            html = html + `<p> Monday ${suLT} ${SuTh}. ${arr6[2]}: Day off</p>`
+            html = html + `<p> Monday ${suLT} ${SuTh}. ${arr6[2]}: Day off (${hUval})</p>`
         }
     }
 
@@ -256,8 +265,38 @@ function Hours(All){
 
     // show total on page
     let htmlTotal = `
-    <p> Total Hours: ${Hour}h ${Minute}m
-    `
+    <p> Total Hours: ${Hour}h ${Minute}m`
+
+    //
+    let grandOff = 0;
+    if (document.getElementById("OffMon").checked){
+        grandOff = grandOff + 1;
+    }
+    if (document.getElementById("OffTue").checked){
+        grandOff = grandOff + 1;
+    }
+    if (document.getElementById("OffWed").checked){
+        grandOff = grandOff + 1;
+    }
+    if (document.getElementById("OffThu").checked){
+        grandOff = grandOff + 1;
+    }
+    if (document.getElementById("OffFri").checked){
+        grandOff = grandOff + 1;
+    }
+    if (document.getElementById("OffSat").checked){
+        grandOff = grandOff + 1;
+    }
+    if (document.getElementById("OffSun").checked){
+        grandOff = grandOff + 1;
+    }
+
+    if (grandOff > 0){
+        htmlTotal = htmlTotal + ` and ${grandOff} days off.`;
+    } else {
+        htmlTotal = htmlTotal + `.`;
+    }
+
     // DOM element
     document.getElementById('grandT').innerHTML = htmlTotal;
 }
@@ -463,3 +502,124 @@ function DayTh(Day) {
     //return day with Ordinal
     return Day;
 }
+
+// Event listeners
+
+document.getElementById("OffMon").addEventListener("change", function() {
+    const checked = this.checked;
+    const hdayM = document.getElementById('holidayM');
+    const Mst = document.getElementById('Mst');
+    const Mex = document.getElementById('Mex');
+
+    if (checked) {
+        Mst.style.display = 'none';
+        Mex.style.display = 'none';
+        hdayM.style.display = 'block';
+    } else {
+        Mst.style.display = '';
+        Mex.style.display = '';
+        hdayM.style.display = 'none';
+    }
+})
+
+document.getElementById("OffTue").addEventListener("change", function() {
+    const checked = this.checked;
+    const hdayT = document.getElementById('holidayT');
+    const Tst = document.getElementById('Tst');
+    const Tex = document.getElementById('Tex');
+
+    if (checked) {
+        Tst.style.display = 'none';
+        Tex.style.display = 'none';
+        hdayT.style.display = 'block';
+    } else {
+        Tst.style.display = '';
+        Tex.style.display = '';
+        hdayT.style.display = 'none';
+    }
+})
+
+document.getElementById("OffWed").addEventListener("change", function() {
+    const checked = this.checked;
+    const hdayW = document.getElementById('holidayW');
+    const Wst = document.getElementById('Wst');
+    const Wex = document.getElementById('Wex');
+
+    if (checked) {
+        Wst.style.display = 'none';
+        Wex.style.display = 'none';
+        hdayW.style.display = 'block';
+    } else {
+        Wst.style.display = '';
+        Wex.style.display = '';
+        hdayW.style.display = 'none';
+    }
+})
+
+document.getElementById("OffThu").addEventListener("change", function() {
+    const checked = this.checked;
+    const hdayH = document.getElementById('holidayH');
+    const Hst = document.getElementById('Hst');
+    const Hex = document.getElementById('Hex');
+
+    if (checked) {
+        Hst.style.display = 'none';
+        Hex.style.display = 'none';
+        hdayH.style.display = 'block';
+    } else {
+        Hst.style.display = '';
+        Hex.style.display = '';
+        hdayH.style.display = 'none';
+    }
+})
+
+document.getElementById("OffFri").addEventListener("change", function() {
+    const checked = this.checked;
+    const hdayF = document.getElementById('holidayF');
+    const Fst = document.getElementById('Fst');
+    const Fex = document.getElementById('Fex');
+
+    if (checked) {
+        Fst.style.display = 'none';
+        Fex.style.display = 'none';
+        hdayF.style.display = 'block';
+    } else {
+        Fst.style.display = '';
+        Fex.style.display = '';
+        hdayF.style.display = 'none';
+    }
+})
+
+document.getElementById("OffSat").addEventListener("change", function() {
+    const checked = this.checked;
+    const hdayS = document.getElementById('holidayS');
+    const Sst = document.getElementById('Sst');
+    const Aex = document.getElementById('Aex');
+
+    if (checked) {
+        Sst.style.display = 'none';
+        Aex.style.display = 'none';
+        hdayS.style.display = 'block';
+    } else {
+        Sst.style.display = '';
+        Aex.style.display = '';
+        hdayS.style.display = 'none';
+    }
+})
+
+document.getElementById("OffSun").addEventListener("change", function() {
+    const checked = this.checked;
+    const hdayU = document.getElementById('holidayU');
+    const Ust = document.getElementById('Ust');
+    const Uex = document.getElementById('Uex');
+
+    if (checked) {
+        Ust.style.display = 'none';
+        Uex.style.display = 'none';
+        hdayU.style.display = 'block';
+    } else {
+        Ust.style.display = '';
+        Uex.style.display = '';
+        hdayU.style.display = 'none';
+    }
+})
