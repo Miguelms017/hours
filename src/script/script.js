@@ -164,10 +164,38 @@ function GetDate(event){
     }
 
     document.getElementById('results').innerHTML = html;
+
+    // buttons section
+    document.getElementById('buttns').style.display = 'block';
 }
 
 // getting and showing Hours
 document.getElementById("submit").addEventListener('click', GetDate);
+
+function CopyBtn(){
+    const toCP1 = document.getElementById('results').innerText;
+    const toCP2 = document.getElementById('grandT').innerText;
+
+    const copied = `${toCP1}\n\n${toCP2}`;
+
+    navigator.clipboard.writeText(copied).then(function(){
+        const success = "<p>Copied successfully to clipboard. <p>";
+        document.getElementById('alert').innerHTML = success;
+        document.getElementById('alert').style.display = 'block';
+        setTimeout(function(){
+            document.getElementById('alert').style.display = 'none';
+        }, 3000);
+    }).catch(function(err){
+        const Failure = `<p>Functionality isn't working: ${err} <p>`;
+        document.getElementById('alert').innerHTML = Failure;
+        document.getElementById('alert').style.display = 'block';
+        document.getElementById('alert').style.backgroundColor = '#7a0000';
+        document.getElementById('alert').style.color = '#ffffff';
+        setTimeout(function(){
+            document.getElementById('alert').style.display = 'none';
+        }, 3000);
+    });
+}
 
 function HourCalc(days){
     // Retrieving hours and giving a value to each
@@ -503,7 +531,7 @@ function DayTh(Day) {
     return Day;
 }
 
-// Event listeners
+// Event listeners by date
 
 document.getElementById("OffMon").addEventListener("change", function() {
     const checked = this.checked;
@@ -623,3 +651,6 @@ document.getElementById("OffSun").addEventListener("change", function() {
         hdayU.style.display = 'none';
     }
 })
+
+// Event listener to copy button
+document.getElementById("clipboard").addEventListener("click", CopyBtn);

@@ -46,3 +46,8 @@ and altering the month limit management.
 + shows the quantity of days off at the bottom of the message.
 + format improved to keep the table style by applying paddings and sizes.
 + version counter at footer.
+
+**1.1.1**
+
+*Clipboard button*
++ added a button which sends the output to the clipboard
