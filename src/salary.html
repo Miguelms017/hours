@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hours</title>
+    <link href="../style/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Hours</h1>
+    </header>
+    <main>
+        <div class="left">
+            <h2>Salary Calculator</h2>
+            <p>Once yo have calculated your hours, You can enter how much you earn per hour on a regular and overtime shift. You can configure the hours on a regular shift</p>
+            <p id="hours"></p>
+            <form action="" method="post">
+                <p>Regular Salary: $ <input type="text" id="SReg"></p>
+                <p>Regular Hours <input type="text" id="HReg" value="40"></p>
+                <p>Overtime Salary: $ <input type="text" id="Ovt"></p>
+                <p>Health Insurance: $ <input type="text" id="Ins"></p>
+                <input type="reset" id="submit">
+                <input type="submit" id="submit" value="submit">
+            </form>
+        </div>
+        <div class="right">
+            <div id="SOut"></div>
+        </div>
+    </main>
+    <script src="../script/salary.js"></script>
+    <footer>
+        <p>WDEB &copy; 2025</p>
+        <p id="version">Ver 1.1.1(beta)</p>
+    </footer>
+</body>
+</html>

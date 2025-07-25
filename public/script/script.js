@@ -279,6 +279,8 @@ function Calculator(minSum){
     // show in console the grand total
     console.log(All);
 
+    localStorage.setItem('Minutes', All);
+
     // final calculation to show results
     Hours(All);
 }
@@ -327,6 +329,8 @@ function Hours(All){
 
     // DOM element
     document.getElementById('grandT').innerHTML = htmlTotal;
+
+    localStorage.setItem('Hours', htmlTotal);
 }
 
 function NextDay(yr, mo, dy){
