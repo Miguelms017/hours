@@ -51,3 +51,10 @@ and altering the month limit management.
 
 *Clipboard button*
 + added a button which sends the output to the clipboard
+
+**1.2**
+
+*Salary Calculator*
++ Created a new page which can calculate the salary in base to inputs entered by user.
++ This page calculates the total salary with the taxes, and insurances discounts.
++ The calculation is an *approximation* there is a change of a reduced margin of error

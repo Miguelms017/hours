@@ -7,7 +7,7 @@
         font-family: var(--ff-heading);
     }
     form{
-        #submit{
+        #submit, #reset{
             margin-top: 0.8em;
             padding: 0.5em;
             background-color: var(--clr-primary-600);
@@ -16,7 +16,7 @@
             border-radius: 5px;
             transition: 0.3s;
         }
-        #submit:hover {
+        #submit:hover, #reset:hover {
             background-color: var(--clr-primary-400);
             color: var(--clr-GScale-100);
             border: 1px solid var(--clr-GScale-100);

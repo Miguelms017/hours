@@ -30,6 +30,9 @@ footer{
 #Mst, #Tst, #Wst, #Hst, #Fst, #Sst, #Ust{
     margin-right: 3.5ch;
 }
+#SReg, #HReg, #Ovt, #Ins{
+    width: 8ch;
+}
 #version{
     font-size: var(--fs-100);
 }
@@ -52,6 +55,9 @@ footer{
     border: 1px solid var(--clr-GScale-500);
     border-radius: 5px;
     transition: 0.3s;
+    font-size: var(--fs-300);
+    text-decoration: none;
+    color: var(--clr-GScale-500);
 }
 .Lbtn:hover{
     background-color: var(--clr-secondary-400);

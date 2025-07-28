@@ -57,7 +57,7 @@
 .left h1 {
   font-family: var(--ff-heading);
 }
-.left form #submit {
+.left form #submit, .left form #reset {
   margin-top: 0.8em;
   padding: 0.5em;
   background-color: var(--clr-primary-600);
@@ -66,7 +66,7 @@
   border-radius: 5px;
   transition: 0.3s;
 }
-.left form #submit:hover {
+.left form #submit:hover, .left form #reset:hover {
   background-color: var(--clr-primary-400);
   color: var(--clr-GScale-100);
   border: 1px solid var(--clr-GScale-100);
@@ -141,6 +141,10 @@ footer {
   margin-right: 3.5ch;
 }
 
+#SReg, #HReg, #Ovt, #Ins {
+  width: 8ch;
+}
+
 #version {
   font-size: var(--fs-100);
 }
@@ -166,6 +170,9 @@ footer {
   border: 1px solid var(--clr-GScale-500);
   border-radius: 5px;
   transition: 0.3s;
+  font-size: var(--fs-300);
+  text-decoration: none;
+  color: var(--clr-GScale-500);
 }
 
 .Lbtn:hover {
