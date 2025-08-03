@@ -58,3 +58,10 @@ and altering the month limit management.
 + Created a new page which can calculate the salary in base to inputs entered by user.
 + This page calculates the total salary with the taxes, and insurances discounts.
 + The calculation is an *approximation* there is a change of a reduced margin of error
+
+**1.3**
+
+*Dark Mode*
++ A dark mode was added.
++ Once set up, it will display a dark version of the page.
++ Also will work if the page is reloaded or even closed on the browser.

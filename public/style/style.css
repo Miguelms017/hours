@@ -115,6 +115,40 @@ header {
   padding: 2.5em;
   background-color: var(--clr-primary-700);
   font-family: var(--ff-heading);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #dark {
+  padding: 0.5em;
+  height: 5ch;
+  background-color: var(--clr-primary-200);
+  color: var(--clr-GScale-100);
+  font-weight: 600;
+  font-family: var(--ff-body);
+  border: 2px solid var(--clr-GScale-100);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+header #dark:hover {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-GScale-500);
+  border: 1px solid var(--clr-GScale-500);
+}
+header #light {
+  display: none;
+  margin-top: 0.8em;
+  padding: 0.5em;
+  background-color: var(--clr-primary-600);
+  font-family: var(--ff-body);
+  border: 1px solid var(--clr-GScale-500);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+header #light:hover {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-GScale-100);
+  border: 1px solid var(--clr-GScale-100);
 }
 
 main {
