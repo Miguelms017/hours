@@ -14,9 +14,16 @@ function BaseSalary(){
     const Rh = Number(document.getElementById('HReg').value);
     const Ovt = Number(document.getElementById('Ovt').value);
     const Mins = Number(sessionStorage.getItem('Minutes'));
+    const Off = Number(sessionStorage.getItem('Offs'));
 
     // convert minutes into hours
-    const hrs = Mins / 60;
+    let hrs = Mins / 60;
+
+    // convert off time in hours
+    const OffHrs = Off * 8;
+    
+    // adding off times if any
+    hrs = hrs + OffHrs;
 
     if (hrs > Rh){
         // calculation if overtime applies

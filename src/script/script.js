@@ -321,6 +321,8 @@ function Hours(All){
         grandOff = grandOff + 1;
     }
 
+    sessionStorage.setItem('Offs', grandOff);
+
     if (grandOff > 0){
         htmlTotal = htmlTotal + ` and ${grandOff} days off.`;
     } else {

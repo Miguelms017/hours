@@ -65,3 +65,8 @@ and altering the month limit management.
 + A dark mode was added.
 + Once set up, it will display a dark version of the page.
 + Also will work if the page is reloaded or even closed on the browser.
+
+**1.3.1**
+
+*Holiday Calculator*
++ Now holidays are calculated as a normal work day.
