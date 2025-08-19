@@ -75,3 +75,8 @@ and altering the month limit management.
 
 *clipboard Warning Tag*
 + A slight change in the clipboard tag position
+
+**1.3.3**
+
+*Bugs Fixed*
++ Bugs Fixed
