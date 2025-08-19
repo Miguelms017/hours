@@ -70,3 +70,8 @@ and altering the month limit management.
 
 *Holiday Calculator*
 + Now holidays are calculated as a normal work day.
+
+**1.3.2**
+
+*clipboard Warning Tag*
++ A slight change in the clipboard tag position

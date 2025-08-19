@@ -103,3 +103,11 @@ footer{
         flex-direction: column;
     }
 }
+
+@media screen and (min-width: 500px){
+    #alert{
+        position: fixed;
+        top: 0.25em;
+        right: 1em;
+    }
+}
