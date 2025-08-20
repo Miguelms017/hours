@@ -80,3 +80,13 @@ and altering the month limit management.
 
 *Bugs Fixed*
 + Bugs Fixed
+
+**1.4**
+
+*Progress indicator*
++ An progress indicator was created.
++ On the page there are 3 circles which change colors when a step is executed;
+    + Gray when is not done.
+    + turquoise when is is process
+    + Green when is done
++ A message is shown with the current step.

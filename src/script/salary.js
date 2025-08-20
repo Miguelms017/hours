@@ -107,6 +107,10 @@ function AllDisc(){
 
     // message to page
     document.getElementById('SOut2').innerHTML = html;
+
+    //progress change
+    document.getElementById("circle_3").style.borderColor = 'var(--clr-primary-700)';
+    document.getElementById("step").innerHTML = "All Done!"
 }
 
 // calculation after insurance costs

@@ -6,7 +6,10 @@
     "build" : "eleventy",
     "start" : "npm-run-all --parallel sass:watch eleventy:serve",
     "sass" : "sass src/style/style.scss public/style/style.css",
-    "sass:watch" : "sass --watch src/style/style.scss:public/style/style.css",
+    "sass:watch" : "npm-run-all --parallel sass:watch:main sass:watch:progress sass:watch:progress2",
+    "sass:watch:main" : "sass --watch src/style/style.scss:public/style/style.css",
+    "sass:watch:progress" : "sass --watch src/style/progress1.scss:public/style/progress1.css",
+    "sass:watch:progress2" : "sass --watch src/style/progress2.scss:public/style/progress2.css",
     "eleventy:serve" : "eleventy --serve"
   },
   "keywords": [],

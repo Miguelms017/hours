@@ -167,6 +167,11 @@ function GetDate(event){
 
     // buttons section
     document.getElementById('buttns').style.display = 'block';
+
+    //progress change
+    document.getElementById("circle_1").style.borderColor = 'var(--clr-primary-700)';
+    document.getElementById("circle_2").style.borderColor = 'var(--clr-secondary-400)';
+    document.getElementById("step").innerHTML = "Get Worked Hours"
 }
 
 // getting and showing Hours
